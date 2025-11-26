@@ -14,7 +14,8 @@ FEATURES_PATH = os.path.join(OUTPUT_DIR, "daily_features.csv")
 # -------------------------------
 # 1. Load transaction data
 # -------------------------------
-df = pd.read_csv(DATA_PATH, encoding="latin1")
+df = pd.read_csv(DATA_PATH, encoding="ISO-8859-1", engine="python")
+
 
 
 # Your dates are like 01-01-2023 → use dayfirst=True
