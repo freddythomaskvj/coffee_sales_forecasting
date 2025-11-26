@@ -11,7 +11,7 @@ hist = df[df["is_future"] == 0].dropna(subset=["actual_qty"])
 
 # --- GLOBAL ACCURACY ---
 mae = mean_absolute_error(hist["actual_qty"], hist["predicted_qty"])
-rmse = mean_squared_error(hist["actual_qty"], hist["predicted_qty"], squared=False)
+rmse = mean_squared_error(hist["actual_qty"], hist["predicted_qty"]) ** 0.5
 mape = (abs(hist["actual_qty"] - hist["predicted_qty"]) / hist["actual_qty"]).mean() * 100
 
 summary = {
