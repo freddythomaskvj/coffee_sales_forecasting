@@ -186,7 +186,7 @@ daily_features = daily.merge(
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 daily_features.to_csv(FEATURES_PATH, index=False)
 
-print("✅ Feature building complete.")
+print("Feature building complete.")
 print(f"Saved to {FEATURES_PATH}")
 print("Rows:", len(daily_features))
 print("Columns:", list(daily_features.columns))
